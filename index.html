@@ -5,21 +5,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sebastian Mattsson Portfolio</title>
     <link rel="stylesheet" href="style.css" />
+    <script
+      src="https://kit.fontawesome.com/9142986a7b.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body>
     <div id="header">
       <div class="container">
         <nav>
           <div class="logo">
-            <p>S.</p>
+            <p>Sebastian</p>
             Mattsson
           </div>
-          <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About me</a></li>
-            <li><a href="#">Portfolio</a></li>
-            <li><a href="#">Contact</a></li>
+          <ul id="sidemenu">
+            <li><a href="#header">Home</a></li>
+            <li><a href="#about">About me</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
           </ul>
+          <i class="fa-solid fa-bars" onclick="openmenu()"></i>
         </nav>
         <div class="header-text">
           <p>System Developer</p>
@@ -45,12 +51,138 @@
           <div class="about-col-2">
             <h1 class="sub-title">About me</h1>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Laboriosam saepe eaque enim sunt itaque inventore nihil ipsam
-              tenetur alias. Quam quasi cum neque ipsa cupiditate veniam error
-              reprehenderit! Cumque, repellendus.
+              As a driven and engaged individual with a deep passion for system
+              development and creative problem-solving, I thrive in dynamic and
+              challenging environments. My enthusiasm extends beyond individual
+              contributions to fostering collaborative team efforts. Throughout
+              my professional journey and academic pursuits, I have consistently
+              taken an active role in educating both colleagues and fellow
+              students, reflecting my belief in the power of shared knowledge
+              and teamwork.<br /><br />
+              Seeking a challenging role in system development, I aim to bring
+              my skills and experiences to the table, while continuously
+              expanding my knowledge. My approach combines technical acumen with
+              a commitment to effective collaboration, making me well-suited for
+              environments that value innovation, teamwork, and continuous
+              learning. With a mindset geared towards growth and a passion for
+              pushing boundaries, I am excited to explore opportunities where I
+              can contribute meaningfully and evolve further as a system
+              developer.
             </p>
+            <div class="tab-titles">
+              <p class="tab-links active-link" onclick="opentab('skills')">
+                Skills
+              </p>
+              <p class="tab-links" onclick="opentab('experience')">
+                Experience
+              </p>
+              <p class="tab-links" onclick="opentab('education')">Education</p>
+            </div>
+            <div class="tab-contents active-tab" id="skills">
+              <ul>
+                <li><span>Web Development</span><br />Web app development</li>
+                <li>
+                  <span>App Development</span><br />Building Android/iOS apps
+                </li>
+                <li><span>API Development</span><br />Building APIs</li>
+              </ul>
+            </div>
+            <div class="tab-contents" id="experience">
+              <ul>
+                <li>
+                  <span>June 2017 - September 2017</span><br />System developer
+                  at Kollmorgen Automation AB
+                </li>
+                <li>
+                  <span>2020</span><br />Educating the staff at NÄL hospital
+                  about a new system
+                </li>
+                <li>
+                  <span>April 2018 - current</span><br />Patient Transporter at
+                  NÄL hospital in Trollhättan, currently on leave of abscence
+                  during my studies
+                </li>
+                <li>
+                  <span>November 2023 - Januari 2024</span><br />App developer
+                  at Knowit Swedspot AB
+                </li>
+              </ul>
+            </div>
+            <div class="tab-contents" id="education">
+              <ul>
+                <li>
+                  <span>Aug 2021 - June 2024 </span><br />System developer,
+                  Bachelor in Informatics at university west
+                </li>
+                <li>
+                  <span>Aug 2010 - June 2013</span><br />Studied in the
+                  Technology Program at high school
+                </li>
+              </ul>
+            </div>
           </div>
+        </div>
+      </div>
+    </div>
+    <div id="portfolio">
+      <div class="container">
+        <h1 class="sub-title">My Work</h1>
+        <div class="work-list">
+          <div class="work">
+            <img src="./images/cubiclefitness.jpg" alt="" />
+            <div class="layer">
+              <h3>CubicleFitness</h3>
+              <p>
+                An app developed as a school project. CubicleFitness is
+                developed for companies who allow their employees to exercise
+                during work hours.
+              </p>
+            </div>
+          </div>
+          <div class="work">
+            <img src="./images/teach.png" alt="" />
+            <div class="layer">
+              <h3>Teach</h3>
+              <p>
+                An app developed as a school project. Teach is developed for
+                students who cant get help with their homework from home. Teach
+                is built like a forum for students.
+              </p>
+            </div>
+          </div>
+          <div class="work">
+            <img src="./images/home_habit.png" alt="" />
+            <div class="layer">
+              <h3>HabitContract</h3>
+              <p>
+                A website developed as a school project. HabitContract was
+                developed for persons who wanted to better their habits.
+              </p>
+            </div>
+          </div>
+        </div>
+        <a href="https://github.com/SebastianMattsson" class="btn"
+          ><i class="fa-brands fa-github"></i> See more</a
+        >
+      </div>
+    </div>
+    <div id="contact">
+      <div class="container">
+        <div class="contact-left">
+          <h1 class="sub-title">Contact Me</h1>
+          <p><i class="fa-solid fa-envelope"></i>sebbe.mattsson.94@gmail.com</p>
+          <p><i class="fa-solid fa-phone"></i>+46 708 866 678</p>
+          <div class="social-icons">
+            <a href="https://www.linkedin.com/in/sebastian-mattsson-352885239/"
+              ><i class="fa-brands fa-linkedin"></i
+            ></a>
+            <a href=""><i class="fa-brands fa-github"></i></a>
+            <a href=""><i class="fa-brands fa-facebook"></i></a>
+            <a href=""><i class="fa-brands fa-twitter"></i></a>
+          </div>
+          <a href="./files/SebastianMattsson_CV.pdf" download class="btn btn2"
+            >Download CV</a
+          >
         </div>
       </div>
     </div>
